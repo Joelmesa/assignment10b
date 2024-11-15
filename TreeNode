@@ -1,0 +1,28 @@
+public class TreeNode implements Comparable<TreeNode> {
+    /** The data payload of the node */
+    private String word;
+    /** Its left and right pointers */
+    private TreeNode left;
+    private TreeNode right;
+
+    /**
+     * Basic constructor creates a simple node with a payload and two null children.
+     * 
+     * @param word the data we store in the node.
+     */
+    public TreeNode(String word) {
+        this.word = word;
+        this.left = null;
+        this.right = null;
+    } // basic constructor
+
+    // Method to count the number of children of the TreeNode
+    public int countChildren() {
+        int count = 0;
+        if (this.left != null) count++;
+        if (this.right != null) count++;
+        return count;
+    }
+
+    // Accessors, mutators, and other methods remain the same
+}
